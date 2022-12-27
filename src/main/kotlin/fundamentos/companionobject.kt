@@ -9,6 +9,10 @@ class MinhaClasse (
         fun criarComValoresPadrao(): MinhaClasse {
             return MinhaClasse("Filipe", "Rua Parana", 30)
         }
+
+        fun criarAPartirDeSegundaClasse(segundaClasse: SegundaClasse): MinhaClasse{
+            return MinhaClasse(segundaClasse.nome, segundaClasse.endereco, segundaClasse.idade)
+        }
     }
 }
 
@@ -29,4 +33,7 @@ fun main() {
 
     var minhaClasse = MinhaClasse.criarComValoresPadrao()
     //var minhaClasse = MinhaClasse.criaClasse()
+
+    //exemplo builder
+    var minhaCLoader = MinhaClasse.criarAPartirDeSegundaClasse(segundaClasse)
 }
